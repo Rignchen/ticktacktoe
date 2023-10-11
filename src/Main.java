@@ -29,4 +29,10 @@ public class Main {
             }
         }
     }
+    public static String Input(String text) {
+        //Print the text, ask the user an input, return the input
+        Scanner sc = new Scanner(System.in);
+        System.out.print(text);
+        return sc.nextLine();
+    }
 }
