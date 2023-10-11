@@ -21,7 +21,21 @@ public class Main {
         boolean player2won = false;
         //main loop
         while (is_playing) {
+            //print the board and ask the player to play
+            clear();
+            System.out.println(getBoard(tableau));
+            var played = inputIn("Player " + (turn % 2 + 1) + " turn: ", trigger);
+            //remove the value played from the trigger list so it can't be played again
+            trigger.remove(played);
+            //update the board
+            var row = (played - '1') / 3;
+            var col = (played - '1') % 3;
+            tableau.get(row).set(col, (turn % 2 == 0) ? 'X' : 'O');
+            //check if the player won
             //todo
+            //update some variables
+            turn++;
+            if (turn == 9) {is_playing = false;}
         }
     }
     public static void clear() {
