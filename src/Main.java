@@ -8,9 +8,7 @@ public class Main {
         List<List<Character>> tableau = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
             List<Character> row = new ArrayList<>();
-            for (int j = 0; j < 3; j++) {
-                row.add((char) (3*i + j + '1'));
-            }
+            for (int j = 0; j < 3; j++) {row.add((char) (3*i + j + '1'));}
             tableau.add(row);
         }
         //make a copy of the board called trigger, except all values are in the main list (will be used to check which case can be played)
