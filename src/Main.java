@@ -3,7 +3,19 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {System.out.println("Hello World!");}
+    public static void main(String[] args) {
+        //generate a list of list of character
+        List<List<Character>> tableau = new ArrayList<>();
+        for (int i = 0; i < 3; i++) {
+            List<Character> row = new ArrayList<>();
+            for (int j = 0; j < 3; j++) {
+                row.add((char) (3*i + j + '1'));
+            }
+            tableau.add(row);
+        }
+        //make a copy of the board called trigger, except all values are in the main list (will be used to check which case can be played)
+        var trigger = tableau.stream().flatMap(List::stream).toList();
+    }
     public static void printBoard(List<List<Character>> tableau) {
     /*  X|X|X
         -+-+-
