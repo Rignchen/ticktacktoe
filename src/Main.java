@@ -35,4 +35,12 @@ public class Main {
         System.out.print(text);
         return sc.nextLine();
     }
+    public static Character InputIn(String text, List<Character> values) {
+        //get an input from the user, check if the input is in values, return the input if it is, else ask again
+        String input = Input(text);
+        while (!values.contains(input.charAt(0))) {
+            input = Input(text);
+        }
+        return input.charAt(0);
+    }
 }
