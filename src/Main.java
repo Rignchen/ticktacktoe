@@ -13,6 +13,15 @@ public class Main {
         }
         //make a copy of the board called trigger, except all values are in the main list (will be used to check which case can be played)
         var trigger = tableau.stream().flatMap(List::stream).toList();
+        //init some other variables
+        boolean is_playing = true;
+        short turn = 0;
+        boolean player1won = false;
+        boolean player2won = false;
+        //main loop
+        while (is_playing) {
+            //todo
+        }
     }
     public static void printBoard(List<List<Character>> tableau) {
     /*  X|X|X
