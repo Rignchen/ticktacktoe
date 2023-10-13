@@ -7,7 +7,7 @@ Tick Tack Toe is a game where two players take turns marking spaces in a 3x3 gri
 1. Find a friend to play with (or play against yourself)
 2. Clone this repository
 3. Open the terminal and navigate to the repository folder
-4. Run the following command: 'java ./src/Main.java'
+4. Run the following command: ``$ java ./src/Main.java``
 5. Enter the slot number you want to place your mark in
 6. Player 1 is 'X' and Player 2 is 'O'
 7. The first player to get three of their marks in a straight line wins the game
